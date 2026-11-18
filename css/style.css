@@ -1,0 +1,771 @@
+
+/* =========================================
+   TEC-H-S | ESTILOS PRINCIPALES
+========================================= */
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+:root {
+    --background: #0b1120;
+    --surface: #111c30;
+    --surface-light: #17243a;
+    --primary: #3984ff;
+    --primary-hover: #2468dc;
+    --text: #f1f5f9;
+    --text-muted: #a5b3c8;
+    --border: #26364e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* 2. ENCABEZADO Y NAVEGACIÓN */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 17, 32, 0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-muted);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-button {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* 3. PORTADA PRINCIPAL */
+
+.hero {
+    padding: 105px 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 40%,
+        rgba(57, 132, 255, 0.15), transparent 35%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-label,
+.section-tag {
+    display: inline-block;
+    color: #75aaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #39d98a;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-text > p {
+    color: var(--text-muted);
+    max-width: 520px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: #75aaff;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 38px;
+    margin-top: 45px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 22px;
+    color: var(--primary);
+}
+
+.hero-stats span {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* 4. VENTANA DE CÓDIGO */
+
+.code-window {
+    background: #101b2d;
+    border: 1px solid #2c405c;
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transform: rotate(1deg);
+}
+
+.window-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 17px 20px;
+    background: #17243a;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.window-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #fa6b6b;
+}
+
+.window-dots span:nth-child(2) {
+    background: #f5c451;
+}
+
+.window-dots span:nth-child(3) {
+    background: #39d98a;
+}
+
+.code-content {
+    padding: 35px 25px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 2.2;
+    overflow-x: auto;
+}
+
+.indent {
+    padding-left: 22px;
+}
+
+.code-purple { color: #c792ea; }
+.code-blue { color: #82aaff; }
+.code-green { color: #c3e88d; }
+.code-yellow { color: #ffcb6b; }
+
+.code-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+/* 5. SECCIONES GENERALES */
+
+.section {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.section-heading p,
+.about-content p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* 6. TARJETAS DE CATEGORÍAS */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+    background: var(--surface-light);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 23px;
+}
+
+.category-icon.blue {
+    color: #70aaff;
+    background: #19345a;
+}
+
+.category-icon.purple {
+    color: #c49aff;
+    background: #342451;
+}
+
+.category-icon.green {
+    color: #59e0a1;
+    background: #164333;
+}
+
+.category-icon.orange {
+    color: #ffbc76;
+    background: #49301d;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.category-card p {
+    color: var(--text-muted);
+    font-size: 13px;
+    min-height: 85px;
+    margin-bottom: 20px;
+}
+
+.category-card a,
+.resource-info a {
+    color: #75aaff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 7. RECURSOS EDUCATIVOS */
+
+.resources-section {
+    background: #0e182a;
+    padding: 95px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.resource-tools {
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.resource-tools input {
+    width: 100%;
+    padding: 15px 18px;
+    color: white;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    outline: none;
+}
+
+.resource-tools input:focus {
+    border-color: var(--primary);
+}
+
+#search-count {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.resource-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.resource-image {
+    height: 155px;
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.image-html {
+    background: linear-gradient(135deg, #733c24, #e66c32);
+}
+
+.image-css {
+    background: linear-gradient(135deg, #17417c, #367fe7);
+}
+
+.image-js {
+    background: linear-gradient(135deg, #8d701b, #d3ad28);
+    color: #17202c;
+}
+
+.resource-info {
+    padding: 22px;
+}
+
+.resource-category {
+    color: #75aaff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.resource-info h3 {
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.resource-info p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.no-results {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 25px;
+}
+
+/* 8. SOBRE TEC-H-S */
+
+.about-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-content h2 {
+    margin-bottom: 22px;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+}
+
+.about-content .btn-primary {
+    margin-top: 15px;
+}
+
+.about-decoration {
+    min-height: 260px;
+    background:
+        radial-gradient(circle, #204b85, #101b2d 70%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-symbol {
+    font-size: clamp(40px, 6vw, 65px);
+    font-weight: 800;
+    color: #75aaff;
+    letter-spacing: -3px;
+}
+
+.about-decoration span {
+    margin-top: 15px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+}
+
+/* 9. PIE DE PÁGINA */
+
+.footer {
+    background: #080e19;
+    border-top: 1px solid var(--border);
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-logo {
+    font-size: 19px;
+}
+
+.footer-content p,
+.copyright {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* 10. DISEÑO RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #111c30;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 5%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .category-grid,
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .resources-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .code-content {
+        font-size: 11px;
+        padding: 25px 15px;
+    }
+
+}
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}/* Etapa 3 · identidad y recursos visuales */
+.logo img { width: 43px; height: 43px; }
+.logo { gap: 11px; }
+.header { background: rgba(8, 14, 25, .90); }
+.hero { position: relative; }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .23; background-image: linear-gradient(rgba(112,170,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(112,170,255,.08) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(90deg, transparent, #000 75%); }
+.hero-content { position: relative; }
+.category-card { display: flex; flex-direction: column; align-items: flex-start; }
+.category-card p { flex: 1; }
+.category-card a, .resource-info a { display: inline-flex; align-items: center; gap: 6px; }
+.category-card a:hover, .resource-info a:hover { color: #b1ceff; }
+:focus-visible { outline: 3px solid #75aaff; outline-offset: 4px; border-radius: 4px; }
+[hidden] { display: none !important; }
+.category-art { width:100%; height:140px; margin:-5px 0 19px; overflow:hidden; border:1px solid var(--border); border-radius:10px; background:#0a1322; }
+.category-art img { width:100%; height:100%; display:block; object-fit:cover; }
+.category-card { padding:20px; }
+/* Mostrar el logotipo original de Tec-H-S en la navegación */
+.logo img { width: 52px; height: 52px; object-fit: cover; object-position: center 42%; border-radius: 10px; background: #020711; }
+.footer-logo img { width: 48px; height: 48px; }
+
+/* ETAPA 3 · aprendizaje, personalización y accesibilidad */
+.skip-link { position:absolute; top:-100px; left:16px; z-index:300; padding:12px 16px; border-radius:8px; background:#fff; color:#102039; font-weight:700; }
+.skip-link:focus { top:12px; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.theme-toggle { padding:9px 13px; border:1px solid var(--border); border-radius:9px; color:var(--text); background:var(--surface); font-size:12px; font-weight:700; cursor:pointer; white-space:nowrap; }
+.theme-toggle:hover { border-color:var(--primary); }
+.learning-dashboard { display:flex; align-items:center; justify-content:space-between; gap:30px; margin-top:34px; margin-bottom:28px; padding:25px 30px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(115deg,var(--surface),var(--surface-light)); }
+.learning-dashboard h2 { margin:0 0 5px; font-size:22px; }
+.learning-dashboard p { color:var(--text-muted); font-size:13px; }
+.progress-control { width:min(390px,45%); }
+progress { appearance:none; width:100%; height:10px; overflow:hidden; border:0; border-radius:999px; background:#26364e; }
+progress::-webkit-progress-bar { border-radius:999px; background:#26364e; }
+progress::-webkit-progress-value { border-radius:999px; background:linear-gradient(90deg,#3984ff,#49d4c0); transition:width .3s ease; }
+progress::-moz-progress-bar { border-radius:999px; background:linear-gradient(90deg,#3984ff,#49d4c0); }
+.text-link { display:inline-block; margin-top:10px; color:#75aaff; font-size:13px; font-weight:700; }
+.resource-tools { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:center; }
+.resource-tools input { grid-column:1/-1; }
+.filter-label { color:var(--text-muted); font-size:13px; }
+#level-filter { min-width:180px; padding:10px 12px; color:var(--text); background:var(--surface); border:1px solid var(--border); border-radius:8px; }
+.resource-level { display:inline-block; margin-top:8px; color:var(--text-muted); font-size:11px; }
+.image-ai { background:linear-gradient(135deg,#30245f,#9858e9); }
+.image-cyber { background:linear-gradient(135deg,#133f3c,#1da77d); }
+.image-data { background:linear-gradient(135deg,#56351e,#d77d31); }
+.glossary-section { padding:90px 0; background:var(--background); border-bottom:1px solid var(--border); }
+.glossary-search { display:block; width:min(520px,100%); margin:0 auto 24px; padding:14px 16px; border:1px solid var(--border); border-radius:9px; background:var(--surface); color:var(--text); font:inherit; }
+.glossary-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.glossary-grid details { padding:16px 18px; border:1px solid var(--border); border-radius:10px; background:var(--surface); }
+.glossary-grid summary { color:var(--text); font-weight:700; cursor:pointer; }
+.glossary-grid details p { margin-top:10px; color:var(--text-muted); font-size:14px; }
+.practice-section { padding-top:65px; padding-bottom:25px; }
+.practice-card { padding:30px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(120deg,var(--surface),var(--surface-light)); }
+.practice-copy { max-width:720px; margin:auto; }
+.practice-copy h2 { font-size:30px; margin-bottom:10px; }
+.practice-copy > p { color:var(--text-muted); margin-bottom:18px; }
+.practice-quiz label { display:block; margin-bottom:8px; font-size:13px; font-weight:700; }
+.answer-row { display:flex; gap:10px; }
+.answer-row input { flex:1; min-width:0; padding:12px 14px; color:var(--text); background:var(--background); border:1px solid var(--border); border-radius:8px; }
+.quiz-feedback { min-height:24px; margin:10px 0; color:var(--text-muted); font-size:13px; }
+.quiz-feedback.is-correct { color:#35ce91; font-weight:700; }
+.quiz-feedback.is-try-again { color:#ffbd74; }
+.quiz-hint { margin-top:12px; padding:12px 14px; border-left:3px solid var(--primary); background:var(--background); color:var(--text-muted); font-size:13px; }
+.lesson-progress { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 0 55px; }
+.lesson-progress > div { width:min(380px,55%); }
+.lesson-progress p { color:var(--text-muted); font-size:13px; margin:4px 0 10px; }
+.btn-secondary { background:transparent; cursor:pointer; }
+.btn-secondary:hover { border-color:var(--primary); color:#75aaff; }
+html[data-theme="light"] body { --background:#f5f8fc; --surface:#fff; --surface-light:#eaf0f8; --text:#17243a; --text-muted:#53657d; --border:#d5dfec; background:var(--background); color:var(--text); }
+html[data-theme="light"] .header { background:rgba(255,255,255,.94); }
+html[data-theme="light"] .hero { background:radial-gradient(circle at 80% 40%,rgba(57,132,255,.12),transparent 35%); }
+html[data-theme="light"] .hero::before { opacity:.32; }
+html[data-theme="light"] .resources-section, html[data-theme="light"] .glossary-section { background:#edf2f8; }
+html[data-theme="light"] .footer { background:#e7edf5; }
+html[data-theme="light"] .code-window { background:#101b2d; color:#f1f5f9; }
+html[data-theme="light"] .window-header { background:#17243a; }
+html[data-theme="light"] .code-footer { color:#a5b3c8; }
+html[data-theme="light"] .about-decoration { background:radial-gradient(circle,#dceaff,#f5f8fc 70%); }
+html[data-theme="light"] .about-decoration span { color:#53657d; }
+html[data-theme="light"] .category-hero { background:radial-gradient(circle at 78% 40%,var(--glow),transparent 36%),linear-gradient(180deg,#eef4fc,#f5f8fc); }
+html[data-theme="light"] .lesson pre { background:#101b2d; color:#c3e88d; }
+html[data-theme="light"] .tip { background:#e6eef9; color:#334c69; }
+html[data-theme="light"] .practice-card { background:linear-gradient(120deg,#fff,#eaf0f8); }
+html[data-theme="light"] .quiz-hint { background:#edf2f8; }
+html[data-theme="light"] .theme-toggle { color:var(--text); }
+:focus-visible { outline:3px solid #73a8ff; outline-offset:3px; }
+@media(max-width:800px) { .learning-dashboard { align-items:flex-start; flex-direction:column; } .progress-control { width:100%; } }
+@media(max-width:650px) { .theme-toggle { width:100%; } .learning-dashboard { padding:21px; } .glossary-grid { grid-template-columns:1fr; } .practice-card { padding:22px 18px; } .answer-row { flex-direction:column; } .lesson-progress { align-items:flex-start; flex-direction:column; padding-bottom:40px; } .lesson-progress > div { width:100%; } .resource-tools { grid-template-columns:1fr; } .resource-tools input { grid-column:auto; } #level-filter { width:100%; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+.theme-menu-item { list-style:none; }
+.theme-menu-item .theme-toggle { font-size:12px; }
+html[data-theme="light"] .resource-info a, html[data-theme="light"] .category-card a, html[data-theme="light"] .text-link { color:#1b5ca8; }
+html[data-theme="light"] .section-tag, html[data-theme="light"] .hero-label { color:#315fa7; }
+.contribute-card { margin:20px 0 8px; padding:17px 18px; border-left:3px solid var(--primary); background:var(--surface); border-radius:0 10px 10px 0; }
+.contribute-card h3 { margin-bottom:5px; font-size:16px; }
+.contribute-card p { margin:0; font-size:13px; }
+.contribute-card { margin:20px 0 8px; padding:17px 18px; border-left:3px solid var(--primary); background:var(--surface); border-radius:0 10px 10px 0; }
+.contribute-card h3 { margin-bottom:5px; font-size:16px; }
+.contribute-card p { margin:0; font-size:13px; }
+.local-note { margin-top:7px; color:var(--text-muted); font-size:11px; }
+.image-hardware { background:linear-gradient(135deg,#1d3d62,#40a8d8); }

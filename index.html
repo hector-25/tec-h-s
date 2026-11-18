@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tec-H-S es una plataforma educativa dedicada a la informática, programación, inteligencia artificial y tecnología.">
+
+    <meta name="author" content="Tec-H-S">
+
+    <title>Tec-H-S | Aprende Tecnología</title>
+    <link rel="icon" href="img/logo.png" type="image/png"> 
+
+    <!-- Conectar archivo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#inicio" class="logo">
+                 <img src="img/logo.png" alt="Logotipo Tec-H-S">
+                <span>Tec-H-S</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menú" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li><li><a href="#mi-aprendizaje">Mi avance</a></li>
+                <li><a href="#recursos">Recursos</a></li><li><a href="#glosario">Glosario</a></li>
+                <li><a href="#nosotros">Nosotros</a></li><li class="theme-menu-item"><button type="button" class="theme-toggle" id="theme-toggle" aria-label="Activar tema claro">☼ Tema claro</button></li>
+                
+            </ul>
+
+            <a href="#categorias" class="nav-button">Explorar</a>
+
+        </nav>
+    </header>
+
+
+    <main id="contenido">
+
+        <!-- PORTADA PRINCIPAL -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        <span class="status-dot"></span>
+                        PLATAFORMA EDUCATIVA DE INFORMÁTICA
+                    </span>
+
+                    <h1>
+                        Descubre el futuro
+                        de la <span>tecnología.</span>
+                    </h1>
+
+                    <p>
+                        Aprende programación, inteligencia artificial,
+                        ciberseguridad y mucho más. El conocimiento
+                        tecnológico comienza aquí.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#categorias" class="btn-primary">
+                            Comenzar a aprender →
+                        </a>
+
+                        <a href="#nosotros" class="btn-secondary">
+                            Conocer más
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong>01</strong>
+                            <span>Aprender</span>
+                        </div>
+
+                        <div>
+                            <strong>02</strong>
+                            <span>Practicar</span>
+                        </div>
+
+                        <div>
+                            <strong>03</strong>
+                            <span>Innovar</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-window">
+
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>tecnologia.js</span>
+                        </div>
+
+                        <div class="code-content">
+                            <p><span class="code-purple">const</span> futuro = {</p>
+                            <p class="indent"><span class="code-blue">conocimiento</span>: <span class="code-green">"Aprender"</span>,</p>
+                            <p class="indent"><span class="code-blue">habilidades</span>: <span class="code-green">"Programar"</span>,</p>
+                            <p class="indent"><span class="code-blue">innovacion</span>: <span class="code-green">"Crear"</span></p>
+                            <p>};</p>
+                            <br>
+                            <p><span class="code-purple">function</span> <span class="code-yellow">construirFuturo</span>() {</p>
+                            <p class="indent">return <span class="code-green">"El límite es tu imaginación"</span>;</p>
+                            <p>}</p>
+                        </div>
+
+                        <div class="code-footer">
+                            <span>● Sistema educativo</span>
+                            <span>HTML · CSS · JS</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="learning-dashboard container" id="mi-aprendizaje" aria-labelledby="progress-heading">
+            <div><span class="section-tag">TU ESPACIO</span><h2 id="progress-heading">Tu aprendizaje, a tu ritmo</h2><p id="overall-progress-label" aria-live="polite">0 de 15 rutas completadas</p></div>
+            <div class="progress-control"><progress id="overall-progress" max="15" value="0" aria-label="Progreso general de aprendizaje"></progress><a href="#recursos" class="text-link">Elegir un recurso →</a><p class="local-note">El progreso se guarda en este navegador.</p></div>
+        </section>
+        <!-- CATEGORÍAS -->
+        <section class="section container" id="categorias">
+
+            <div class="section-heading">
+                <span class="section-tag">ÁREAS DE CONOCIMIENTO</span>
+                <h2>Explora el mundo de la informática</h2>
+                <p>
+                    Descubre diferentes áreas tecnológicas y desarrolla
+                    nuevas habilidades.
+                </p>
+            </div>
+
+            <div class="category-grid">
+
+                <article class="category-card">
+                    <div class="category-art"><img src="img/visual-programacion.svg" alt="Ilustración de código"></div>
+                    <h3>Programación</h3>
+                    <p>
+                        Aprende lenguajes como Python, JavaScript,
+                        HTML y CSS desde cero.
+                    </p>
+                    <a href="programacion.html">Explorar área →</a>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-art"><img src="img/visual-ia.svg" alt="Ilustración de inteligencia artificial"></div>
+                    <h3>Inteligencia artificial</h3>
+                    <p>
+                        Conoce la inteligencia artificial,
+                        el aprendizaje automático y la ciencia de datos.
+                    </p>
+                    <a href="inteligencia-artificial.html">Explorar área →</a>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-art"><img src="img/visual-ciberseguridad.svg" alt="Ilustración de ciberseguridad"></div>
+                    <h3>Ciberseguridad</h3>
+                    <p>
+                        Aprende sobre seguridad informática,
+                        redes y protección de información.
+                    </p>
+                    <a href="ciberseguridad.html">Explorar área →</a>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-art"><img src="img/visual-datos.svg" alt="Ilustración de bases de datos"></div>
+                    <h3>Bases de datos</h3>
+                    <p>
+                        Descubre SQL, MySQL, almacenamiento
+                        y administración de datos.
+                    </p>
+                    <a href="bases-de-datos.html">Explorar área →</a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- RECURSOS -->
+        <section class="resources-section" id="recursos">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">APRENDE Y PRACTICA</span>
+                    <h2>Recursos para aprender</h2>
+                    <p>
+                        Encuentra contenidos que te ayudarán
+                        a mejorar tus conocimientos tecnológicos.
+                    </p>
+                </div>
+
+                <div class="resource-tools">
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Buscar un recurso..."
+                        aria-label="Buscar recursos educativos">
+                    <label class="filter-label" for="level-filter">Nivel</label>
+                    <select id="level-filter" aria-label="Filtrar recursos por nivel"><option value="all">Todos los niveles</option><option value="principiante">Principiante</option><option value="intermedio">Intermedio</option></select>
+
+                    <span id="search-count" aria-live="polite"></span>
+                </div>
+
+                <div class="resource-grid" id="resource-grid">
+
+                    <article class="resource-card" data-level="principiante" data-search="html estructura paginas web programacion">
+                        <div class="resource-image image-html">
+                            <span>HTML5</span>
+                        </div>
+                        <div class="resource-info">
+                            <span class="resource-category">DESARROLLO WEB</span><span class="resource-level">Principiante</span>
+                            <h3>Introducción a HTML</h3>
+                            <p>
+                                Aprende a crear la estructura
+                                de una página web.
+                            </p>
+                            <a href="html.html"
+                                >
+                                Aprender más →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-level="principiante" data-search="css estilos diseño paginas web">
+                        <div class="resource-image image-css">
+                            <span>CSS3</span>
+                        </div>
+                        <div class="resource-info">
+                            <span class="resource-category">DISEÑO WEB</span><span class="resource-level">Principiante</span>
+                            <h3>Aprende CSS</h3>
+                            <p>
+                                Descubre cómo diseñar páginas
+                                web modernas y atractivas.
+                            </p>
+                            <a href="css.html"
+                                >
+                                Aprender más →
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="resource-card" data-level="principiante" data-search="javascript programacion interactividad código">
+                        <div class="resource-image image-js">
+                            <span>JS</span>
+                        </div>
+                        <div class="resource-info">
+                            <span class="resource-category">PROGRAMACIÓN</span><span class="resource-level">Principiante</span>
+                            <h3>JavaScript desde cero</h3>
+                            <p>
+                                Aprende a crear páginas web
+                                interactivas.
+                            </p>
+                            <a href="javascript.html"
+                                >
+                                Aprender más →
+                            </a>
+                        </div>
+                    </article>
+
+                                    <article class="resource-card" data-level="principiante" data-search="python programación variables ejercicios desde cero"><div class="resource-image image-python"><span>PY</span></div><div class="resource-info"><span class="resource-category">PROGRAMACIÓN</span><span class="resource-level">Principiante</span><h3>Python desde cero</h3><p>Practica variables, condiciones, bucles y funciones con ejemplos guiados.</p><a href="python.html">Empezar Python →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="inteligencia artificial ia modelo datos patrones"><div class="resource-image image-ai"><span>IA</span></div><div class="resource-info"><span class="resource-category">INTELIGENCIA ARTIFICIAL</span><span class="resource-level">Principiante</span><h3>Primeros pasos con IA</h3><p>Comprende cómo los datos ayudan a un modelo a reconocer patrones.</p><a href="inteligencia-artificial.html">Abrir lección →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="ciberseguridad phishing contraseñas seguridad"><div class="resource-image image-cyber"><span>SEGURIDAD</span></div><div class="resource-info"><span class="resource-category">CIBERSEGURIDAD</span><span class="resource-level">Principiante</span><h3>Reconoce el phishing</h3><p>Aprende a verificar mensajes sospechosos y proteger tus cuentas.</p><a href="ciberseguridad.html">Abrir lección →</a></div></article>
+                    <article class="resource-card" data-level="intermedio" data-search="sql bases datos consultas tablas"><div class="resource-image image-data"><span>SQL</span></div><div class="resource-info"><span class="resource-category">BASES DE DATOS</span><span class="resource-level">Intermedio</span><h3>Consulta una tabla con SQL</h3><p>Practica SELECT, filtros y ordenamiento de resultados.</p><a href="bases-de-datos.html">Abrir lección →</a></div></article>                    <article class="resource-card" data-level="principiante" data-search="hardware computadora cpu procesador memoria ram disco ssd"><div class="resource-image image-hardware"><span>CPU · RAM · SSD</span></div><div class="resource-info"><span class="resource-category">HARDWARE</span><span class="resource-level">Principiante</span><h3>Conoce tu computadora</h3><p>Identifica CPU, memoria, almacenamiento y otros componentes.</p><a href="hardware.html">Aprender hardware →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="software aplicaciones controladores instalar programas"><div class="resource-image image-ai"><span>APPS</span></div><div class="resource-info"><span class="resource-category">SOFTWARE</span><span class="resource-level">Principiante</span><h3>Software y aplicaciones</h3><p>Instala desde fuentes confiables y aprende a mantener programas.</p><a href="software.html">Aprender software →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="windows escritorio archivos actualizaciones sistema"><div class="resource-image image-css"><span>WINDOWS</span></div><div class="resource-info"><span class="resource-category">SISTEMAS OPERATIVOS</span><span class="resource-level">Principiante</span><h3>Windows desde cero</h3><p>Organiza archivos, revisa actualizaciones y prepara respaldos.</p><a href="windows.html">Aprender Windows →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="office microsoft 365 word excel powerpoint instalación licencia"><div class="resource-image image-cyber"><span>OFFICE</span></div><div class="resource-info"><span class="resource-category">PRODUCTIVIDAD</span><span class="resource-level">Principiante</span><h3>Instala y aprende Office</h3><p>Guía oficial de instalación, licencia y primeras tareas.</p><a href="office.html">Aprender Office →</a></div></article>
+                    <article class="resource-card" data-level="intermedio" data-search="mantenimiento seguridad computadora limpieza respaldo"><div class="resource-image image-data"><span>CUIDADO</span></div><div class="resource-info"><span class="resource-category">MANTENIMIENTO</span><span class="resource-level">Intermedio</span><h3>Cuida tu computadora</h3><p>Hábitos seguros de limpieza, actualización y respaldo.</p><a href="mantenimiento.html">Ver mantenimiento →</a></div></article>
+                    <article class="resource-card" data-level="principiante" data-search="redes internet wifi router modem conexion"><div class="resource-image image-ai"><span>WI-FI</span></div><div class="resource-info"><span class="resource-category">REDES E INTERNET</span><span class="resource-level">Principiante</span><h3>Redes e Internet</h3><p>Comprende el Wi-Fi y soluciona problemas habituales.</p><a href="redes.html">Aprender redes →</a></div></article>
+                    <article class="resource-card" data-level="intermedio" data-search="linux ubuntu sistema operativo terminal distribuciones"><div class="resource-image image-python"><span>LINUX</span></div><div class="resource-info"><span class="resource-category">SISTEMAS OPERATIVOS</span><span class="resource-level">Intermedio</span><h3>Linux y Ubuntu</h3><p>Prueba la terminal y consulta las instrucciones oficiales de Ubuntu.</p><a href="linux.html">Aprender Linux →</a></div></article></div>
+<p class="no-results" id="no-results" hidden>
+                    No se encontraron recursos. Intenta con otra búsqueda.
+                </p>
+
+            </div>
+        </section>
+
+
+        <section class="glossary-section" id="glosario">
+            <div class="container"><div class="section-heading"><span class="section-tag">CONSULTA RÁPIDA</span><h2>Glosario tecnológico</h2><p>Conceptos clave explicados con palabras sencillas.</p></div>
+                <label class="sr-only" for="glossary-search">Buscar términos del glosario</label><input class="glossary-search" id="glossary-search" type="search" placeholder="Buscar un término…">
+                <div class="glossary-grid">
+                    <details data-glossary-entry><summary>Algoritmo</summary><p>Una secuencia ordenada de pasos para resolver una tarea, como las instrucciones de una receta.</p></details>
+                    <details data-glossary-entry><summary>Variable</summary><p>Un nombre que permite guardar y consultar un valor dentro de un programa.</p></details>
+                    <details data-glossary-entry><summary>HTML</summary><p>Lenguaje de marcado que organiza el contenido de una página web: títulos, párrafos, enlaces e imágenes.</p></details>
+                    <details data-glossary-entry><summary>Modelo de IA</summary><p>Sistema ajustado con ejemplos para reconocer patrones y producir una estimación o resultado.</p></details>
+                    <details data-glossary-entry><summary>Phishing</summary><p>Engaño que imita a una fuente confiable para intentar obtener datos o que abras un enlace dañino.</p></details>
+                    <details data-glossary-entry><summary>Base de datos</summary><p>Conjunto organizado de información que se puede consultar y actualizar de forma estructurada.</p></details>
+                    <details data-glossary-entry><summary>SQL</summary><p>Lenguaje usado para consultar y administrar datos en bases de datos relacionales.</p></details>
+                    <details data-glossary-entry><summary>Accesibilidad web</summary><p>Diseñar sitios para que puedan usarlos personas con distintas capacidades y formas de navegación.</p></details>
+                </div>
+            </div>
+        </section>
+        <!-- SOBRE NOSOTROS -->
+        <section class="about-section container" id="nosotros" aria-labelledby="about-heading">
+
+            <div class="about-content">
+
+                <span class="section-tag">SOBRE TEC-H-S</span>
+
+                <h2 id="about-heading">La tecnología se aprende compartiendo conocimientos.</h2>
+
+                <p>Tec-H-S es un proyecto educativo independiente para quienes quieren comprender la tecnología desde sus fundamentos y practicar con ejemplos claros.</p>
+
+                <p>Cada área combina explicaciones, ejemplos y actividades para avanzar desde los conceptos iniciales hacia proyectos propios. Tec-H-S está pensado para estudiantes y personas curiosas que quieren desarrollar habilidades digitales con bases claras.</p><div class="contribute-card"><h3>¿Cómo aportar?</h3><p>Propón temas que te gustaría aprender, señala conceptos que necesiten otra explicación y sugiere ejemplos o tutoriales para futuras lecciones.</p></div>
+
+                <a href="#inicio" class="btn-primary">
+                    Volver al inicio ↑
+                </a>
+
+            </div>
+
+            <div class="about-decoration">
+                <div class="about-symbol">&lt;THS/&gt;</div>
+                <span>TECNOLOGÍA PARA TODOS</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#inicio" class="logo footer-logo">
+                <img src="img/logo.png" alt="" width="36" height="36">
+                <span>Tec-H-S</span>
+            </a>
+
+            <p>
+                Aprender hoy, innovar mañana.
+            </p>
+
+            <span class="copyright">
+                © <span id="current-year"></span> Tec-H-S.
+                Todos los derechos reservados.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Conectar JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

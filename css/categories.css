@@ -1,0 +1,26 @@
+.category-page { min-height: 100vh; }
+.category-hero { padding: 78px 0 70px; background: radial-gradient(circle at 78% 40%, var(--glow), transparent 36%), linear-gradient(180deg,#0d192b,#0b1120); border-bottom: 1px solid var(--border); }
+.category-hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:55px; align-items:center; }
+.breadcrumbs { color:var(--text-muted); font-size:13px; margin-bottom:25px; }
+.breadcrumbs a { color:#90b9ff; }
+.category-hero h1 { font-size:clamp(40px,5vw,62px); line-height:1.08; letter-spacing:-2px; margin:0 0 20px; }
+.category-hero p { color:var(--text-muted); max-width:570px; margin:0 0 25px; }
+.topic-art { width:min(100%,440px); justify-self:end; filter:drop-shadow(0 24px 40px rgba(0,0,0,.35)); }
+.topic-art img { display:block; width:100%; }
+.learning-path { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:42px; }
+.path-step { border:1px solid var(--border); border-radius:14px; padding:23px; background:var(--surface); }
+.path-step span { display:block; color:#80afff; font-size:12px; font-weight:800; letter-spacing:1px; margin-bottom:10px; }
+.path-step h3 { font-size:17px; margin-bottom:8px; }
+.path-step p { color:var(--text-muted); font-size:13px; }
+.lesson { display:grid; grid-template-columns:1fr 1fr; gap:35px; align-items:center; padding:28px 0; border-bottom:1px solid var(--border); }
+.lesson:last-child { border:0; }
+.lesson h3 { font-size:23px; margin:8px 0 12px; }
+.lesson p, .lesson li { color:var(--text-muted); font-size:14px; }
+.lesson ul { padding-left:20px; margin-top:10px; }
+.lesson pre { overflow:auto; padding:22px; border-radius:12px; background:#070d17; border:1px solid #273a54; color:#c3e88d; font-size:13px; line-height:1.7; }
+.tip { border-left:3px solid #5f9cff; background:#111e33; color:#c7d6eb; padding:14px 17px; margin-top:14px; font-size:13px; }
+.page-nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+.page-nav a { padding:9px 13px; border:1px solid var(--border); border-radius:9px; color:var(--text-muted); font-size:13px; }
+.page-nav a:hover { border-color:var(--primary); color:white; }
+@media(max-width:800px){.category-hero-grid,.lesson{grid-template-columns:1fr}.topic-art{justify-self:center;max-width:400px}.learning-path{grid-template-columns:1fr}.category-hero{padding:55px 0}}
+@media(max-width:650px){.category-hero h1{font-size:42px}.lesson pre{font-size:12px}}

@@ -1,0 +1,25 @@
+/* Cursos iniciales de Tec-H-S */
+.course-badge { display:inline-flex; margin-top:8px; padding:7px 11px; border:1px solid var(--border); border-radius:999px; color:var(--text-muted); background:var(--surface); font-size:12px; font-weight:700; }
+.course-overview { padding-top:65px; padding-bottom:55px; }
+.course-lessons { padding-bottom:30px; }
+.course-lesson { margin:22px 0; padding:28px; border:1px solid var(--border); border-radius:15px; background:var(--surface); }
+.course-lesson-heading { display:flex; align-items:center; gap:15px; margin-bottom:16px; }
+.course-lesson-heading > span { display:grid; width:42px; height:42px; place-items:center; border-radius:12px; background:#19345a; color:#8ab5ff; font-weight:800; }
+.course-lesson h2 { margin:4px 0 0; font-size:24px; }
+.course-lesson > p { color:var(--text-muted); margin-bottom:16px; }
+.course-lesson > pre, .exercise-prompt pre { overflow:auto; margin:14px 0 20px; padding:18px; border:1px solid #273a54; border-radius:10px; background:#070d17; color:#c3e88d; font:13px/1.7 Consolas,monospace; }
+.exercise-prompt { margin-top:20px; padding:20px; border-radius:12px; background:var(--surface-light); }
+.exercise-prompt h3 { margin-bottom:8px; }
+.exercise-prompt > p { color:var(--text-muted); margin-bottom:16px; }
+.exercise-prompt details { margin:12px 0 18px; }
+.exercise-prompt summary { color:#82b1ff; font-weight:700; cursor:pointer; }
+.exercise-prompt details p { color:var(--text-muted); font-size:13px; }
+.exercise-prompt form { margin-top:18px; }
+.course-page .practice-quiz .answer-row { flex-wrap:wrap; }
+.course-page .practice-quiz .answer-row input { min-width:220px; }
+.course-page .lesson-progress { margin-top:10px; }
+.image-python { background:linear-gradient(135deg,#12427a,#f2c94c); color:#101b2d; }
+html[data-theme="light"] .course-lesson { background:#fff; }
+html[data-theme="light"] .exercise-prompt { background:#edf2f8; }
+html[data-theme="light"] .course-lesson-heading > span { background:#dbe9ff; color:#225ba7; }
+@media(max-width:650px) { .course-lesson { padding:20px 16px; } .course-lesson h2 { font-size:21px; } .exercise-prompt { padding:16px; } .course-page .practice-quiz .answer-row input { min-width:0; } }
